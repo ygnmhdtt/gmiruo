@@ -2,6 +2,11 @@
 
 miruopt opt;
 miruopt_dpi dpi;
+
+/* func version() { */
+/* fmt.Printf("gmiruo version 1.0.0") */
+/* } */
+
 void version()
 {
   const char *libpcap = pcap_lib_version();
@@ -10,6 +15,38 @@ void version()
     printf("%s\n", libpcap);
   }
 }
+
+/* func usage() { */
+/*   version(); */
+/*   printf("usage: miruo [option] [expression]\n"); */
+/*   printf("  option\n"); */
+/*   printf("   -h, --help                     # help\n"); */
+/*   printf("   -V, --version                  # version\n"); */
+/*   printf("   -i, --interface=dev            # eth0,bond0,any...\n"); */
+/*   printf("   -v, --view-data=NUM            # \n"); */
+/*   printf("   -T, --long-connect=time[ms]    # Threshold of connection time for lookup. Default 0ms(off)\n"); */
+/*   printf("   -t, --long-delay=time[ms]      # Threshold of long delay time for lookup. Default 0ms(off)\n"); */
+/*   printf("   -r, --retransmit=time[ms]      # Threshold of retransmit time for lookup. Default 1000ms\n"); */
+/*   printf("   -s, --stat=interval[sec]       # statistics view interval. Default 0sec(off)\n"); */
+/*   printf("   -f, --file=file                # read file(for tcpdump -w)\n"); */
+/*   printf("   -S, --syn=[0|1]                # syn retransmit lookup mode.default=1. 0=ignore 1=lookup\n"); */
+/*   printf("   -R, --rst=[0|1|2]              # rst lookup mode.default=1. (see README)\n"); */
+/*   printf("   -F, --fragment=[0|1]           # ip fragment lookup. default=1\n"); */
+/*   printf("   -C, --color=[0|1]              # color 0=off 1=on\n"); */
+/*   printf("   -L, --session-limit=NUM        # active session limit. Default 1024\n"); */
+/*   printf("   -l, --segment-limit=NUM        # active segment limit. Default 65536\n"); */
+/*   printf("   -m, --dpi-mode=mode            # deep packet inspection mode. (now support only http)\n"); */
+/*   printf("   -q, --quiet                    # \n"); */
+/*   printf("       --all                      # all session lookup\n"); */
+/*   printf("       --live                     # live mode(all segment lookup)\n"); */
+/*   printf("\n"); */
+/*   printf("  expression: see man tcpdump\n"); */
+/*   printf("\n"); */
+/*   printf("  ex)\n"); */
+/*   printf("    miruo -i eth0 -s 10 2>statistics.log\n"); */
+/*   printf("    miruo -i eth0 host 192.168.0.100 and port 80\n"); */
+/*   printf("    miruo -i eth0 -T5000 src host 192.168.0.1\n"); */
+/* } */
 
 void usage()
 {
